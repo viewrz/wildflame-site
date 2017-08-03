@@ -1,0 +1,61 @@
+@import "img/bg-pattern";
+
+$orange: #f67031;
+$yellow: #ffa400;
+$red: #ed0036;
+
+$family-sans-serif: "Nunito Sans", sans-serif;
+
+$weight-medium: 600;
+$weight-semibold: 700;
+$weight-bold: 800;
+
+$primary: $red;
+
+@import "bulma/bulma";
+@import "vendor/steps";
+
+.hero {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  &.is-primary.is-bold {
+    box-shadow: inset 0px -10px 20px 0px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(147deg, $primary, $primary 65%, $orange);
+    &.has-pattern {
+      background: $bg-pattern,
+        linear-gradient(147deg, $primary, $primary 65%, $orange);
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+  font-weight: 300;
+  color: #fff;
+  .img-container {
+    text-align: center;
+    padding-top: 0.2em;
+    img {
+      height: 1.2em;
+    }
+  }
+  .brand-name {
+    margin-top: -0.2em;
+    .flame {
+      font-weight: 800;
+    }
+    .extension {
+      word-break: normal;
+      display: inline-block;
+      font-size: 0.5em;
+      width: 0;
+    }
+  }
+}
+
+.step.no-links a {
+  cursor: default;
+}
+
+.image.is-64w {
+  width: 64px;
+}
