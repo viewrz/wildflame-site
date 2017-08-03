@@ -95,7 +95,8 @@ export default () =>
         <div className="columns is-centered">
           <div className="column is-8">
             <hr />
-            <form>
+            <form method="post" action="thank-you">
+              <input type="hidden" name="form-name" value="contact" />
               <div className="field">
                 <label htmlFor="name" className="label">
                   Brand / Agency / Name
@@ -119,7 +120,7 @@ export default () =>
                     id="email"
                     name="email"
                     className="input"
-                    type="text"
+                    type="email"
                     placeholder="Only for us - no spam"
                   />
                 </div>
